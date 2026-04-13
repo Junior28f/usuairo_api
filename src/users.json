@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": 1,
+    "nombre": "manuel",
+    "email": "feliciano@gmail.com",
+    "edad": 25,
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "carlo",
+    "email": "feliciano@gmail.com",
+    "edad": 25,
+    "activo": true
+  },
+  {
+    "id": 4,
+    "nombre": "carlo",
+    "email": "feliciano@gmail.com",
+    "edad": 25,
+    "activo": true
+  }
+]

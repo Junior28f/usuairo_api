@@ -1,22 +1,18 @@
 async function cargarUsuarios() {
   try {
     const res = await fetch('/api/users');
-    const data = await res.json();
+    const usuarios = await res.json();
 
     const lista = document.getElementById('lista-usuarios');
-
     lista.innerHTML = '';
 
-    data.forEach(usuario => {
+    usuarios.forEach(u => {
       const li = document.createElement('li');
-      li.textContent = `${usuario.nombre} - ${usuario.email} - ${usuario.edad}`;
+      li.textContent = `${u.id} - ${u.nombre} - ${u.email} - ${u.edad}`;
       lista.appendChild(li);
     });
 
   } catch (error) {
-    console.log('Error:', error);
+    console.error('Error cargando usuarios:', error);
   }
 }
-
-
-cargarUsuarios();
