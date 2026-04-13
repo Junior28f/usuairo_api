@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "JUnior",
+    "email": "feliciano@gmail.com",
+    "edad": 25,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "JUnior",
+    "email": "feliciano@gmail.com",
+    "edad": 25,
+    "activo": true
+  }
+]
