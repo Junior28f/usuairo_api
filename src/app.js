@@ -7,7 +7,11 @@ const app = express();
 
 let usuarios = [];
 let idCounter = 1;
-const filePath = './users.json';
+const filePath = path.join(__dirname, 'users.json');
+
+if (!fs.existsSync(filePath)) {
+  fs.writeFileSync(filePath, JSON.stringify([]));
+}
 
 if (fs.existsSync(filePath)) {
   const data = fs.readFileSync(filePath, 'utf-8');
@@ -108,9 +112,8 @@ app.delete('/api/users/:id', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send({ usuarios});
+  res.send({ usuarios });
 });
-
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
