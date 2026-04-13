@@ -111,6 +111,6 @@ app.get('/', (req, res) => {
   res.send({ usuarios});
 });
 
-app.listen(3000, () => {
-  console.log('ejecutando en el puerto 3000... http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`Servidor en puerto ${PORT}`);
 });
